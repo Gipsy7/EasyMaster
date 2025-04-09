@@ -23,7 +23,7 @@ namespace EasyMaster.Application
                 IdModulo = m.IdModulo,
                 Nome = m.Nome,
                 Tipo = m.Tipo,
-                Componentes = m.Componentes.Select(c => new ComponenteViewModel
+                Componentes = m.Componentes?.Select(c => new ComponenteViewModel
                 {
                     IdComponente = c.IdComponente,
                     Nome = c.Nome,
@@ -44,7 +44,7 @@ namespace EasyMaster.Application
                 IdModulo = modulo.IdModulo,
                 Nome = modulo.Nome,
                 Tipo = modulo.Tipo,
-                Componentes = modulo.Componentes.Select(c => new ComponenteViewModel
+                Componentes = modulo.Componentes?.Select(c => new ComponenteViewModel
                 {
                     IdComponente = c.IdComponente,
                     Nome = c.Nome,
@@ -61,7 +61,7 @@ namespace EasyMaster.Application
             {
                 Nome = moduloViewModel.Nome,
                 Tipo = moduloViewModel.Tipo,
-                Componentes = moduloViewModel.Componentes.Select(c => new Componente
+                Componentes = moduloViewModel.Componentes?.Select(c => new Componente
                 {
                     Nome = c.Nome,
                     Descricao = c.Descricao,
